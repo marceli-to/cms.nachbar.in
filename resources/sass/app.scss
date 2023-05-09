@@ -1,0 +1,43 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: app
+ * -----------------------------------------------------------------------------
+ */
+
+// Settings
+@import 'config/colors';
+@import 'config/global';
+@import 'config/spaces';
+@import 'config/typo';
+
+// Helpers 
+@import 'helpers/normalize';
+@import 'helpers/flexbox';
+@import 'helpers/functions';
+@import 'helpers/mixins';
+@import 'helpers/spaces';
+@import 'helpers/utilities';
+
+// Typo
+@import 'typo/webfonts';
+@import 'typo/mixins';
+@import 'typo/helpers'; 
+
+// Components
+@import 'components/blocks';
+@import 'components/heading';
+@import 'components/images';
+@import 'components/logo';
+@import 'components/ratio';
+
+// Layout
+@import 'layout/base';
+@import 'layout/header';
+@import 'layout/main';
+
+// Views
+@import 'views/home';
+
+// Vendor
+@import 'vendor/fancybox';
+

@@ -1,0 +1,24 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: layout/header
+ * -----------------------------------------------------------------------------
+ */
+
+header.site-header {
+  @include responsive-prop('height', $header-height);
+
+  > div {
+    @extend %inner-block;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: $space-sm;
+    padding-top: $space-sm;
+
+    @include bp-sm() {
+      align-items: baseline;
+      padding-bottom: $space-lg;
+      padding-top: $space-lg;
+    }
+  }
+}

@@ -1,0 +1,44 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: layout/base
+ * -----------------------------------------------------------------------------
+ */
+
+html {
+	overflow-y: scroll;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+	background-color: $color-white;
+	color: $color-black;
+	@include font-smoothing();
+	@include font-size($fs-sm);
+	@include font-regular();
+	position: relative;
+}
+
+section {
+	margin-bottom: 20px;
+	padding-top: 20px;
+}
+
+main {
+	
+}
+
+article {
+	-ms-word-break: break-all;
+	word-break: break-all;
+	word-break: break-word;
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	hyphens: auto;
+}
+
+// Scrollbars
+@include scrollbar(8px, #ccc);

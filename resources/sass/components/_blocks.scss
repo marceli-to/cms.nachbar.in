@@ -1,0 +1,16 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: component/blocks
+ * -----------------------------------------------------------------------------
+ *
+ */
+
+%inner-block,
+.inner-block {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  position: relative;
+  max-width: $site-max-width;
+}
