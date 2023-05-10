@@ -1,27 +1,44 @@
-{{ if content_text }}
-  <article>
-    {{ content_text }}
-      {{ if type == 'news' }}
-        <div class="teaser">
-          <div>
-            {{ if title }}
-              <h1>{{ title }}</h1>
-            {{ /if }}
-            {{ if text }}
-              {{ text }}
-            {{ /if }}
+<section class="content">
+  {{ if content_text }}
+    <article>
+      {{ content_text }}
+        {{ if type == 'news' }}
+          <div class="teaser">
+            <div>
+              {{ if title }}
+                <h1>{{ title }}</h1>
+              {{ /if }}
+              {{ if text }}
+                {{ text }}
+              {{ /if }}
+            </div>
           </div>
-        </div>
-      {{ /if }}
-      {{ if type == 'text' }}
-        {{ text }}
-      {{ /if }}
-    {{ /content_text }}
-  </article>
-{{ /if }}
+        {{ /if }}
+        {{ if type == 'text' }}
+          {{ text }}
+        {{ /if }}
+      {{ /content_text }}
+    </article>
+  {{ /if }}
 
-{{ if content_meta }}
-  <article>
-    {{ content_meta }}
-  </article>
+  {{ if content_meta }}
+    <article>
+      {{ content_meta }}
+    </article>
+  {{ /if }}
+</section>
+
+{{ if images }}
+<section>
+  <h2>Impressionen</h2>
+  <div class="gallery">
+    {{ images }}
+      <figure class="ratio-box">
+        <a href="{{url}}" data-fancybox="gallery">
+          <img src="/img/blank.png" data-src="{{ glide :src="url" width="600" height="600" quality="100" }}" class="lazyload block w-full h-auto" width="1536" height="2048" alt="{{ caption }}" />
+        </a>
+      </figure>  
+    {{ /images }}
+  </div>
+</section>
 {{ /if }}
