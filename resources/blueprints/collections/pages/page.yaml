@@ -21,14 +21,9 @@ sections:
             - h2
             - h3
             - bold
-            - italic
             - unorderedlist
-            - orderedlist
             - removeformat
-            - quote
             - anchor
-            - image
-            - table
           save_html: false
           inline: false
           toolbar_mode: fixed
@@ -48,22 +43,15 @@ sections:
           listable: hidden
           instructions_position: above
           visibility: visible
-  seo:
-    display: SEO
-    fields:
-      -
-        handle: seo_description
-        field:
-          antlers: false
-          display: Description
-          type: textarea
-          icon: textarea
-          listable: hidden
-          instructions_position: above
-          visibility: visible
-          always_save: false
-  settings:
-    display: Settings
+          sets:
+            news:
+              display: News
+              fields:
+                -
+                  import: news
+          container: assets
+  sidebar:
+    display: Sidebar
     fields:
       -
         handle: slug
@@ -106,3 +94,44 @@ sections:
           visibility: visible
           always_save: false
           folder: layout
+  meta:
+    display: Meta
+    fields:
+      -
+        handle: content_meta
+        field:
+          collapse: false
+          always_show_set_button: false
+          previews: true
+          smart_typography: false
+          buttons:
+            - h2
+            - h3
+            - bold
+            - italic
+            - unorderedlist
+            - orderedlist
+            - removeformat
+            - quote
+            - anchor
+            - image
+            - table
+          save_html: false
+          inline: false
+          toolbar_mode: fixed
+          link_noopener: false
+          link_noreferrer: false
+          target_blank: false
+          reading_time: false
+          fullscreen: true
+          allow_source: true
+          enable_input_rules: true
+          enable_paste_rules: true
+          antlers: false
+          remove_empty_nodes: false
+          display: Text
+          type: bard
+          icon: bard
+          listable: hidden
+          instructions_position: above
+          visibility: visible
